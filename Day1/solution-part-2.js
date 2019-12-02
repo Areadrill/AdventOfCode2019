@@ -13,6 +13,6 @@ while (requirement.filter(el => el > 0).length !== 0) {
     requirements = [...requirements, ...requirement];
 }
 
-const sol = requirements.reduce((accum, cur) => cur > 0 ? accum+cur : accum, 0);
+const sol = requirements.reduce((accum, cur) => accum + Math.max(cur, 0), 0);
 
 console.log(sol);

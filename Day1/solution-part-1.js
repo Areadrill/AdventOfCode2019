@@ -1,8 +1,8 @@
 const fs = require('fs');
 
 const input = fs.readFileSync('input.txt', 'utf-8');
-const inputTok = input.split('\n').map(tok => parseInt(tok.trim()));
-const sol = inputTok.map(tok => Math.floor(tok/3) - 2).reduce((accum, cur) => accum+cur, 0);
+const inputTok = input.split('\n');
+const sol = inputTok.reduce((accum, cur) => accum + (Math.floor(parseInt(cur.trim())/3) - 2), 0);
 
 console.log(sol);
 
